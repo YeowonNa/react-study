@@ -1,12 +1,12 @@
 import ReviewItem from "./ReviewItem";
 
-function ReviewList({ items }) {
+function ReviewList({ items, onDelete }) {
   return (
     <ul>
       {items.map((item) => {
         return (
           <li>
-            <ReviewItem item={item} />
+            <ReviewItem item={item} onDelete={onDelete} />
           </li>
         );
       })}
