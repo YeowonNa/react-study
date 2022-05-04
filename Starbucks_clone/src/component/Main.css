@@ -5,6 +5,7 @@ img {
 
 .container {
   width: 100%;
+  margin-top: 123px;
 }
 
 .toWrap {
@@ -45,7 +46,6 @@ img {
 }
 
 .set_01 {
-  z-index: 8;
   top: 11.8%;
   left: 35.7%;
   width: 48.7%;
@@ -53,7 +53,6 @@ img {
 }
 
 .set_02 {
-  z-index: 9;
   top: 33.5%;
   left: 19.6%;
   width: 41.5%;
@@ -61,7 +60,6 @@ img {
 }
 
 .set_03 {
-  z-index: 10;
   top: 15.6%;
   right: -8%;
   width: 26.9%;
