@@ -1,11 +1,41 @@
+.header {
+  background-color: #f6f5ef;
+  border-bottom: 1px solid #000;
+  border-top: 2px solid #000;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.center {
+  height: 120px;
+  margin: 0 auto;
+  width: 1100px;
+  position: relative;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header h1 {
-  display: inline-block;
+.logo {
+  height: 75px;
+  width: 75px;
+  z-index: 12;
+  position: absolute;
+  left: 0;
+}
+
+.logo a {
+  display: block;
+  background: url("https://www.starbucks.co.kr/common/img/common/logo.png");
+  height: 100%;
+  overflow: hidden;
+  text-indent: -20000px;
 }
 
 .center ul {
@@ -19,11 +49,6 @@ ul {
   padding-right: 2em;
 }
 
-.center {
-  margin: 0 auto;
-  width: 100%;
-}
-
 .gnb {
   display: inline-block;
 }
@@ -34,7 +59,11 @@ ul {
 }
 
 .dropDown {
+  position: absolute;
   text-align: right;
+  height: 66px;
+  top: 54px;
+  width: 100%;
 }
 
 .gnb li:hover {
