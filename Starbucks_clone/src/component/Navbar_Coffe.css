@@ -1,0 +1,20 @@
+.nav {
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  top: 24px;
+}
+
+.nav ul {
+  display: inline-block;
+}
+
+.nav li {
+  display: inline-block;
+  color: white;
+  margin: 10px;
+  padding-right: 5em;
+  padding-left: 1em;
+}

@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  display: inline-block;
+}
+
+.center ul {
+  display: inline-block;
+  text-align: right;
+  width: 90%;
+}
+
+.center li {
+  display: inline-block;
+  padding-right: 2em;
+}
+
+.center {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gnb {
+  display: inline-block;
+}
+
+.gnb li {
+  display: inline-block;
+  padding: 1.5em;
+}
+
+.dropDown {
+  text-align: right;
+}
+
+.gnb li:hover {
+  background-color: #333;
+}
+
+.nav_until {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.gnb_coffee:hover .nav_until {
+  display: block;
+}
+
+.gnb_menu:hover .nav_until {
+  display: block;
+}
