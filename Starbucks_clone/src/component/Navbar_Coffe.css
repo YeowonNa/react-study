@@ -5,6 +5,7 @@
   text-align: left;
   padding: 20px;
   top: 22px;
+  animation: fadeInDown 0.5s;
 }
 
 .nav ul {
@@ -17,4 +18,15 @@
   margin: 10px;
   padding-right: 5em;
   padding-left: 1em;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }
