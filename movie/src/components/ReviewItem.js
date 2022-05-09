@@ -6,8 +6,15 @@ function formatDate(value) {
   const date = new Date(value);
   return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}`;
 }
-const ReviewItem = ({ item, onDelete }) => {
-  const handleDeleteClick = () => onDelete(item.id);
+const ReviewItem = ({ item, onDelete, onEdit }) => {
+  const handleDeleteClick = () => {
+    onDelete(item.id);
+  };
+
+  const handleEditClick = () => {
+    onEdit(item.id);
+  };
+
   return (
     <div className={styles.reviewListItem}>
       <img
@@ -21,6 +28,7 @@ const ReviewItem = ({ item, onDelete }) => {
         <p>{formatDate(item.createdAt)}</p>
         <p>{item.content}</p>
         <button onClick={handleDeleteClick}>삭제</button>
+        <button onClick={handleEditClick}>수정</button>
       </div>
     </div>
   );
