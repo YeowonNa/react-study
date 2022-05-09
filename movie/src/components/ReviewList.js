@@ -27,7 +27,7 @@ function ReviewList({ items, onDelete, onUpdate, onUpdateSuccess }) {
                 initialPreview={imgUrl}
                 onCancel={handleCancel}
                 onSubmit={handleSubmit}
-                onUpdateSuccess={handleSuceessSubmit}
+                onSubmitSuccess={handleSuceessSubmit}
               />
             </li>
           );
