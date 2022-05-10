@@ -1,11 +1,11 @@
 import Navbar_Coffe from "./Navbar_Coffe";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <div className="header">
-      <div className="center">
-        <h1 className="logo">
+    <div className={styles.header}>
+      <div className={styles.center}>
+        <h1 className={styles.logo}>
           <a href="/" title="스타벅스메인">
             스타벅스 로고
           </a>
@@ -27,22 +27,22 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className="dropDown">
-        <ul className="gnb">
-          <li className="gnb_coffee">
+      <div className={styles.dropDown}>
+        <ul className={styles.gnb}>
+          <li className={styles.gnb_nav01}>
             COFFEE
-            <div className="nav_until">
+            <div className={styles.nav_until}>
               <Navbar_Coffe />
             </div>
           </li>
-          <li className="gnb_menu">
+          <li className={styles.gnb_nav02}>
             MENU
-            <div className="nav_until"></div>
+            <div className={styles.nav_until}></div>
           </li>
-          <li>STORE</li>
-          <li>RESPONSIBILITY</li>
-          <li>STARBUCKS REWARDS</li>
-          <li>WHAT'S NEW</li>
+          <li className={styles.gnb_nav03}>STORE</li>
+          <li className={styles.gnb_nav04}>RESPONSIBILITY</li>
+          <li className={styles.gnb_nav05}>STARBUCKS REWARDS</li>
+          <li className={styles.gnb_nav06}>WHAT'S NEW</li>
         </ul>
       </div>
     </div>
