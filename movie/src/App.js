@@ -3,6 +3,7 @@ import ReviewList from "./components/ReviewList";
 import { DeleteReview, getReviews, UpdateReview } from "./api";
 import { createReview } from "./api";
 import ReviewForm from "./components/ReviewForm";
+import useAsync from "./components/hooks/useAsync";
 
 const LIMIT = 6;
 
@@ -11,8 +12,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [offset, setOffset] = useState(0);
   const [hasNext, setHasNext] = useState(false);
-  const [isLoading, setisLoading] = useState(false);
-  const [loadingError, setLoadingError] = useState(null);
+  const [isLoading, loadingError, getReviewsAsync] = useAsync(getReviews);
 
   const sortedItems = items.sort((a, b) => b[order] - a[order]);
 
@@ -28,17 +28,9 @@ function App() {
   };
 
   const handleLoad = async (options) => {
-    let result;
-    try {
-      setisLoading(true);
-      setLoadingError(null);
-      result = await getReviews(options);
-    } catch (error) {
-      setLoadingError(error);
-      return;
-    } finally {
-      setisLoading(false);
-    }
+    let result = await getReviewsAsync(options);
+    if (!result) return;
+
     const { paging, reviews } = result;
     if (options.offset === 0) {
       setItems(reviews);
